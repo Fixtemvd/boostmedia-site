@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BoostMedia — SMM Агентство</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      animation: slideDown 1.5s ease-in-out;
+    }
+    header p {
+      font-size: 20px;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 0.8s;
+    }
+    header a {
+      background: white;
+      color: #2575fc;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      opacity: 0;
+      animation: fadeInUp 1.5s ease forwards;
+      animation-delay: 1.5s;
+    }
+    header a:hover {
+      background: #f1f1f1;
+      transform: scale(1.05);
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 32px;
+      color: #2575fc;
+    }
+    .services, .pricing {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    .pricing .card {
+      border: 2px solid #2575fc;
+    }
+    .testimonials blockquote {
+      background: #f1f1f1;
+      padding: 20px;
+      border-left: 5px solid #2575fc;
+      margin: 20px 0;
+      transition: background 0.3s ease;
+    }
+    .testimonials blockquote:hover {
+      background: #e8f0ff;
+    }
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      transition: border 0.3s ease;
+    }
+    form input:focus, form textarea:focus {
+      border: 1px solid #2575fc;
+      outline: none;
+    }
+    form button {
+      background: #2575fc;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s ease, transform 0.2s;
+    }
+    form button:hover {
+      background: #6a11cb;
+      transform: scale(1.05);
+    }
+    .contacts {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 18px;
+    }
+    .contacts a {
+      color: #2575fc;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    .contacts a:hover {
+      color: #6a11cb;
+    }
+
+    /* Анимации */
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes slideDown {
+      from {transform: translateY(-50px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>BoostMedia</h1>
+    <p>Поднимем ваш бизнес в топ соцсетей!</p>
+    <a href="#contact">Заказать продвижение</a>
+  </header>
+
+  <section id="about">
+    <h2>О нас</h2>
+    <p>Мы команда специалистов по SMM, которая помогает брендам развиваться в Instagram, TikTok, VK и Telegram. Наш подход — это креатив, аналитика и результат.</p>
+  </section>
+
+  <section id="services">
+    <h2>Наши услуги</h2>
+    <div class="services">
+      <div class="card">📱 Ведение соцсетей</div>
+      <div class="card">🎯 Таргетированная реклама</div>
+      <div class="card">🔥 Продвижение Reels & TikTok</div>
+      <div class="card">🤖 Чат-боты в Telegram</div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h2>Отзывы</h2>
+    <div class="testimonials">
+      <blockquote>"BoostMedia помогли нам увеличить продажи на 40% за 2 месяца!" — ООО «Пример»</blockquote>
+      <blockquote>"Очень крутая команда, рекомендую!" — Мария, блогер</blockquote>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <h2>Тарифы</h2>
+    <div class="pricing">
+      <div class="card">
+        <h3>Базовый</h3>
+        <p>10 000 ₽ / месяц</p>
+      </div>
+      <div class="card">
+        <h3>Стандарт</h3>
+        <p>25 000 ₽ / месяц</p>
+      </div>
+      <div class="card">
+        <h3>Премиум</h3>
+        <p>50 000 ₽ / месяц</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Свяжитесь с нами</h2>
+    <form>
+      <input type="text" placeholder="Ваше имя" required>
+      <input type="email" placeholder="Ваш email" required>
+      <textarea rows="5" placeholder="Ваш запрос"></textarea>
+      <button type="submit">Отправить заявку</button>
+    </form>
+
+    <div class="contacts">
+      <p>📞 Телефон: <a href="tel:+79104577620">+7 910 457 76 20</a></p>
+      <p>💬 Telegram: <a href="https://t.me/BoostMediaSMMAgent" target="_blank">@BoostMediaSMMAgent</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 BoostMedia | Все права защищены</p>
+  </footer>
+
+  <script>
+    // Плавное появление секций при скролле
+    const sections = document.querySelectorAll("section");
+
+    function showSections() {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(sec => {
+        const boxTop = sec.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) {
+          sec.classList.add("visible");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", showSections);
+    window.addEventListener("load", showSections);
+  </script>
+</body>
+</html>
